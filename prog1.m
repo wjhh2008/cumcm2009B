@@ -16,7 +16,7 @@ level=[
      ];
 
 %day
-n=300;
+n=2000;
 block=zeros(n+100,1);
 
 catn=79;
