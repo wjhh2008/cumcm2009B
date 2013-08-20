@@ -1,7 +1,6 @@
 clear,clc
 cd C:\Users\wjh\Documents\百度云\iMake\竞赛\数模\cumcm2009B
 num=[55 72 82 39 101];
-for g=1:100
 load('out.mat');
 load('chart.mat');
 load('wait.mat');
@@ -12,12 +11,12 @@ level=[
      1     1     1     1     1     1     1
      2     2     4     4     5     3     3
      5     5     5     5     3     2     2
-     3     3     2     3     4     4     4
-     4     4     3     2     2     5     5
+     3     3     2     2     4     4     4
+     4     4     3     3     2     5     5
      ];
 
 %day
-n=1000;
+n=300;
 block=zeros(n+100,1);
 
 catn=79;
@@ -43,8 +42,8 @@ for day=73:n
     weekday=mod(1+day,7)+1; 
     %上床
     u=u+block(day);
-    chart=[chart;NaN NaN NaN NaN NaN];
-    catn=catn+1;
+    %chart=[chart;NaN NaN NaN NaN NaN];
+    %catn=catn+1;
     for lv=1:5
         ty=find(level(:,weekday)==lv);
         can1=((wait(:,1)==ty) & (wait(:,2)<day));
@@ -75,9 +74,7 @@ for day=73:n
     wait=[wait;add];
     tt=tt+size(wait,1);
 end
-a(g)=tt/n;
-end
-a
+
 
 
 

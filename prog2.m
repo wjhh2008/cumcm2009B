@@ -6,7 +6,7 @@ load('wait.mat');
 load('level.mat');
 load('time2.mat');
 %day
-n=500;
+n=300;
 block=zeros(n+100,1);
 
 catn=79;
